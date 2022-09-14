@@ -10,10 +10,13 @@ packer.startup(
     use("arkav/lualine-lsp-progress")
     use { 'nvim-telescope/telescope.nvim', requires = { "nvim-lua/plenary.nvim" } }
     use "LinArcX/telescope-env.nvim"
+    use("glepnir/dashboard-nvim")
+    use("ahmedkhalf/project.nvim")
+    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     -- 你的插件列表...
   end
 )
-
+  
 pcall(
   vim.cmd,
   [[

@@ -54,6 +54,12 @@ nvim_tree.setup({
     system_open = {
         cmd = 'open', -- mac 直接设置为 open
     },
+    -- project plugin 需要这样设置
+    update_cwd = true,
+    update_focused_file = {
+    enable = true,
+    update_cwd = true,
+    },
 })
 -- 自动关闭
 vim.cmd([[
