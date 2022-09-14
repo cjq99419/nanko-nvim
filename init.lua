@@ -1,0 +1,8 @@
+require('basic')
+require('plugins')
+require('keybindings')
+require("colorscheme")
+require('nvim-web-devicons')
+require("plugin-config.nvim-tree")
+require("plugin-config.bufferline")
+require("plugin-config.lualine")
