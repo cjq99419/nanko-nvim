@@ -13,10 +13,33 @@ packer.startup(
     use("glepnir/dashboard-nvim")
     use("ahmedkhalf/project.nvim")
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+    -- LSP
+    --   use { "williamboman/mason.nvim" }
+    use("williamboman/nvim-lsp-installer")
+    -- Lspconfig
+    use({ "neovim/nvim-lspconfig" })
+
+    -- 补全引擎
+    use("hrsh7th/nvim-cmp")
+    -- snippet 引擎
+    use("hrsh7th/vim-vsnip")
+    -- 补全源
+    use("hrsh7th/cmp-vsnip")
+    use("hrsh7th/cmp-nvim-lsp") -- { name = nvim_lsp }
+    use("hrsh7th/cmp-buffer") -- { name = 'buffer' },
+    use("hrsh7th/cmp-path") -- { name = 'path' }
+    use("hrsh7th/cmp-cmdline") -- { name = 'cmdline' }
+
+    -- 常见编程语言代码段
+    use("rafamadriz/friendly-snippets")
+    use("onsails/lspkind-nvim")
+    use("lukas-reineke/indent-blankline.nvim")
+    use("tami5/lspsaga.nvim")
+    use("mhartington/formatter.nvim")
     -- 你的插件列表...
   end
 )
-  
+
 pcall(
   vim.cmd,
   [[

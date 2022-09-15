@@ -31,31 +31,26 @@ db.custom_center = {
     desc = "Edit Projects                       ",
     action = "edit ~/.local/share/nvim/project_nvim/project_history",
   },
-  -- {
-  --   icon = "  ",
-  --   desc = "Edit .bashrc                        ",
-  --   action = "edit ~/.bashrc",
-  -- },
-  -- {
-  --   icon = "  ",
-  --   desc = "Change colorscheme                  ",
-  --   action = "ChangeColorScheme",
-  -- },
-  -- {
-  --   icon = "  ",
-  --   desc = "Edit init.lua                       ",
-  --   action = "edit ~/.config/nvim/init.lua",
-  -- },
-  -- {
-  --   icon = "  ",
-  --   desc = "Find file                           ",
-  --   action = "Telescope find_files",
-  -- },
-  -- {
-  --   icon = "  ",
-  --   desc = "Find text                           ",
-  --   action = "Telescopecope live_grep",
-  -- },
+  {
+    icon = "  ",
+    desc = "Find File                           ",
+    action = "<cmd>Telescope find_files<CR>"
+  },
+  {
+    icon = "  ",
+    desc = "File Browser                        ",
+    action = "<cmd>Telescope file_browser<CR>"
+  },
+  {
+    icon = "  ",
+    desc = "Configuration                       ",
+    action = "<cmd>e $MYVIMRC|OpenTree<CR>"
+  },
+  {
+    icon = "  ",
+    desc = "Update Plugins                      ",
+    action = "<cmd>PackerUpdate<CR>"
+  },
 }
 
 db.custom_header = {
@@ -66,3 +61,16 @@ db.custom_header = {
   [[██████╔╝██║  ██║██║██████╔╝╚██████╔╝]],
   [[╚═════╝ ╚═╝  ╚═╝╚═╝╚═════╝  ╚═════╝ ]],
 }
+
+local function footer()
+  local datetime = os.date(" %Y-%m-%d") .. "  -  "
+  local author = " " .. os.getenv("USER") .. "  -  "
+  local total_plugins = " " .. #vim.tbl_keys(packer_plugins) .. " plugins" .. "  -  "
+  local version = vim.version()
+  local nvim_version_info = " v" .. version.major .. "." .. version.minor .. "." .. version.patch
+
+  return author .. datetime .. total_plugins .. nvim_version_info
+end
+
+--db.section.footer.val = footer()
+--db.section.footer.opts.hl = "Constant"
