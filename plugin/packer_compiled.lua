@@ -119,11 +119,6 @@ _G.packer_plugins = {
     path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["indent-blankline.nvim"] = {
-    loaded = true,
-    path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
-    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
