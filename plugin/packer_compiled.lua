@@ -119,6 +119,11 @@ _G.packer_plugins = {
     path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
   ["lspkind-nvim"] = {
     loaded = true,
     path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
@@ -138,6 +143,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["nvim-blame-line"] = {
+    loaded = true,
+    path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/nvim-blame-line",
+    url = "https://github.com/tveskag/nvim-blame-line"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -203,6 +218,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-startuptime"] = {
+    loaded = true,
+    path = "/Users/chenjingqiao/.local/share/nvim/site/pack/packer/start/vim-startuptime",
+    url = "https://github.com/dstein64/vim-startuptime"
   },
   ["vim-vsnip"] = {
     loaded = true,

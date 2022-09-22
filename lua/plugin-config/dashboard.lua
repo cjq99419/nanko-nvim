@@ -7,11 +7,12 @@ end
 local function footer()
 	local datetime = os.date(" %Y-%m-%d") .. "  -  "
 	local author = " " .. os.getenv("USER") .. "  -  "
-	--local total_plugins = " " .. #vim.tbl_keys(packer_plugins) .. " plugins" .. "  -  "
+	-- vim.notify(packer_plugins)
+	local total_plugins = " " .. #vim.tbl_keys(packer_plugins) .. " plugins" .. "  -  "
 	local version = vim.version()
 	local nvim_version_info = " v" .. version.major .. "." .. version.minor .. "." .. version.patch
 
-	return author .. datetime .. nvim_version_info
+	return author .. datetime .. total_plugins .. nvim_version_info
 end
 
 db.custom_footer = {
@@ -23,27 +24,27 @@ db.custom_footer = {
 
 db.custom_center = {
 	{
-		icon = "		          ",
+		icon = "	     ",
 		desc = "Projects                            ",
 		action = "Telescope projects",
 	},
 	{
-		icon = "		          ",
+		icon = "	     ",
 		desc = "Recently files                      ",
 		action = "Telescope oldfiles",
 	},
 	{
-		icon = "		          ",
+		icon = "	     ",
 		desc = "Edit keybindings                    ",
 		action = "edit ~/.config/nvim/lua/keybindings.lua",
 	},
 	{
-		icon = "        	          ",
+		icon = "	     ",
 		desc = "Edit Projects                       ",
 		action = "edit ~/.local/share/nvim/project_nvim/project_history",
 	},
 	{
-		icon = "		          ",
+		icon = "	     ",
 		desc = "Find File                           ",
 		action = "Telescope find_files"
 	},
